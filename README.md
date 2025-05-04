@@ -12,7 +12,7 @@ A simple e-commerce application built with Spring Boot.
     *   Spring Boot
     *   Java
     *   Maven (Dependency Management)
-    *   H2 Database (Temporary)
+    *   PostgresSQL (Supabase)
 *   **Frontend:**
     *   HTML
     *   CSS

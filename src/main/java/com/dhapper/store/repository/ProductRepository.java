@@ -16,6 +16,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     // SELECT * FROM product WHERE category IN (?, ?, ...);
     List<Product> findByCategoryIn(List<String> categories);
 
-//    List<Product> findAll(); Already Implemented :)
+    //    List<Product> findAll(); Already Implemented :)
 
 }

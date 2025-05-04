@@ -59,6 +59,14 @@
 <!--			<scope>runtime</scope>-->
 <!--		</dependency>-->
 
+		<!-- PostgresSQL -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+<!--			<version>42.7.1</version>-->
+		</dependency>
+
+
 		<!-- h2 testing db -->
 		<dependency>
 			<groupId>com.h2database</groupId>

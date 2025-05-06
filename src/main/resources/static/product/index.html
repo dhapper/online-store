@@ -12,31 +12,7 @@
     <ul id="productLinks"></ul>
     <a href="../">Back to Home Page</a>
 
-    <script>
-        fetch('/api/products')
-        .then(response => response.json())
-        .then(data => {
-            const productLinks = document.getElementById('productLinks');
-            if (data && data.length > 0) {
-                for(let i = 0; i < data.length; i++){
-
-                    const product = data[i];
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-
-                    <!--a.href = '/product/' + product.id;-->
-                    a.href = '/product/product-entry.html?id=' + product.id;
-                    a.textContent = product.name + ' - $' + product.price;
-
-                    li.appendChild(a);
-                    productLinks.appendChild(li);
-                }
-            } else {
-                productsLink.textContent = 'No Products Available';
-                productsLink.href = '#'; // Keep a placeholder or link to a "no products" page
-            }
-        });
-    </script>
+    <script src="../js/product.js"></script>
 
 </div>
 

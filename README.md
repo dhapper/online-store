@@ -20,8 +20,6 @@ A simple e-commerce application built with Spring Boot.
 
 ## To-Do List
 
-*   seperate scripts from HTML
-*   implement SQL database
 *   implement bootstrap and some basic css styling
-*   host it
+*   update database
     

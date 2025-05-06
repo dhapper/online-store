@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
 @Entity
-@Table(name = "products")
+@Table(name = "singles")
 public class Product {
 
     @Id
@@ -21,7 +21,7 @@ public class Product {
     private String condition;
     private BigDecimal price;
     private String language;
-    private String set;
+    private String cardSet;
     private String type;
     private String filename;
 
@@ -86,9 +86,9 @@ public class Product {
 
     public void setLanguage(String language) { this.language = language; }
 
-    public String getSet() { return set; }
+    public String getCardSet() { return cardSet; }
 
-    public void setSet(String set) { this.set = set; }
+    public void setCardSet(String cardSet) { this.cardSet = cardSet; }
 
     public String getType() { return type; }
 

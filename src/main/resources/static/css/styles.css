@@ -10,8 +10,22 @@ html {
 }
 
 body {
-    background: black;
+    background-image: url('../../assets/fire_pkmn_v2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
 }
 
 .container {
@@ -20,4 +34,53 @@ body {
 
 a {
     color: cyan;
+}
+
+.frosted-glass {
+    backdrop-filter: blur(2px);
+    border: 1px rgba(224, 224, 224, 0.3); solid;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.35);
+    width: fit-content;
+    border-radius: 16px;
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5),
+                inset 5px 5px 10px rgba(255, 255, 255, 0.5),
+                0 0 10px black;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.product-list-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    transition: scale 0.5s;
+}
+
+.product-list-view:hover {
+    scale: 1.1;
+}
+
+.product-list-view img {
+    width: 250px;
+}
+
+.products-list a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.product-list-view h3 {
+    margin-bottom: 10px;
+}
+
+.product-list-view h4 {
+    margin-top: 10px;
+    font-size: 32px;
 }

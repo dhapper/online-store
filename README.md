@@ -22,4 +22,5 @@ A simple e-commerce application built with Spring Boot.
 
 *   implement bootstrap and some basic css styling
 *   update database
+  * update to sqlite
     

@@ -9,11 +9,14 @@ fetch('/api/products/' + productId)
     })
     .then(product => {
         const container = document.getElementById('productDetails');
+
+        const imageBasePath = '../assets/products/singles/';
+
         container.innerHTML = `
             <p><strong>ID:</strong> ${product.id}</p>
             <p><strong>Name:</strong> ${product.name}</p>
             <p><strong>Price:</strong> $${product.price}</p>
-            <p><strong>Description:</strong> ${product.description || 'N/A'}</p>
+            <img src="${imageBasePath}${product.filename}" alt="Image of ${product.name}">
         `;
     })
     .catch(error => {

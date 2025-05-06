@@ -15,15 +15,15 @@ public class Product {
     @Column(name = "created_at")
     private OffsetDateTime createdAt;
 
-    private String category;
-
+//    private String category;
     private String name;
-
-    private String description;
-
+//    private String description;
     private String condition;
-
     private BigDecimal price;
+    private String language;
+    private String set;
+    private String type;
+    private String filename;
 
     // Getters and Setters
     public Long getId() {
@@ -42,13 +42,13 @@ public class Product {
         this.createdAt = createdAt;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
+//    public String getCategory() {
+//        return category;
+//    }
+//
+//    public void setCategory(String category) {
+//        this.category = category;
+//    }
 
     public String getName() {
         return name;
@@ -58,13 +58,13 @@ public class Product {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+//    public String getDescription() {
+//        return description;
+//    }
+//
+//    public void setDescription(String description) {
+//        this.description = description;
+//    }
 
     public String getCondition() {
         return condition;
@@ -81,4 +81,20 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+    public String getLanguage() { return language; }
+
+    public void setLanguage(String language) { this.language = language; }
+
+    public String getSet() { return set; }
+
+    public void setSet(String set) { this.set = set; }
+
+    public String getType() { return type; }
+
+    public void setType(String type) { this.type = type; }
+
+    public String getFilename() { return filename; }
+
+    public void setFilename(String filename) { this.filename = filename; }
 }

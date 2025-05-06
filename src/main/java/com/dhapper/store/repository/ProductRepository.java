@@ -14,8 +14,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findByPriceLessThan(Double price);
 
     // SELECT * FROM product WHERE category IN (?, ?, ...);
-    List<Product> findByCategoryIn(List<String> categories);
-
-    //    List<Product> findAll(); Already Implemented :)
+//    List<Product> findByCategoryIn(List<String> categories);
 
 }

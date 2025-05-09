@@ -3,21 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://kit.fontawesome.com/87ffeac168.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div class="container">
-    <div class="frosted-glass">
-        <h1>Products</h1>
+<div class="container-fluid">
+    <nav>
+        <img src="../../assets/logo_v2.png" alt="logo" class="logo">
+        <ul class="tabs">
+            <li><a href="#home">Home</a></li>
+            <li><a class="active" href="#singles">Singles</a></li>
+            <li><a href="#sealed-products">Sealed Products</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li><a><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+
+    </nav>
+
+    <div class="toolbar-container">
+        <h2>Singles</h2>
+        <div class="list-tools">
+            <div class="filters">
+                <div class="dropdown-container">
+                    <span class="label">Set</span>
+                    <ul class="dropdown">
+                        <li data-filter="cardset" data-value="Call of Legends">Call of Legends</li>
+                        <li data-filter="cardset" data-value="Stellar Crown">Stellar Crown</li>
+                        <li data-filter="cardset" data-value="Undaunted">Undaunted</li>
+                    </ul>
+                </div>
+                <div class="dropdown-container">
+                    <span class="label">Card Type</span>
+                    <ul class="dropdown">
+                        <li data-filter="type" data-value="EX">EX</li>
+                        <li data-filter="type" data-value="IR">Illustration Rares</li>
+                    </ul>
+                </div>
+                <div class="price-inputs-container">
+                    <span class="label">Price Range:</span>
+                    <div class="inputs-container">
+                        <input type="number" id="minPrice" placeholder=" Min Price">
+                        <input type="number" id="maxPrice" placeholder=" Max Price">
+                        <button>Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sorting">
+                <div class="dropdown-container">
+                    <span id="currentSortLabel">Sort by: <strong id="sortMethodLabel">Alphabetically (A-Z)</strong></span>
+                    <ul class="dropdown" id="sortOptions">
+                        <li data-sort="alphabetical-asc" data-label="Alphabetically (A-Z)">Alphabetically (A-Z)</li>
+                        <li data-sort="price-asc" data-label="Price (low to high)">Price (low to high)</li>
+                        <li data-sort="price-desc" data-label="Price (high to low)">Price (high to low)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <h2>Singles</h2>
+    <div id="filterDisplay"></div>
+
     <ul id="productLinks" class="products-list"></ul>
+
     <a href="../">Back to Home Page</a>
 
-    <script src="../js/product.js"></script>
-
 </div>
+<script src="../js/product.js"></script>
+<script>
+    fetchAndDisplayProducts({}, 'alphabetical-asc');
+</script>
 
 </body>
 </html>

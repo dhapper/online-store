@@ -5,15 +5,19 @@
     box-sizing:  border-box;
 }
 
+:root {
+    --primary-color: white;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-image: url('../../assets/fire_pkmn_v2.jpg');
-    background-size: cover;
+    background-image: url('../../assets/bg_dark.jpg');
+    /*background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
     color: white;
 }
 
@@ -24,20 +28,101 @@ body::after {
     left: 0;
     width: 100%;
     min-height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.55);
     z-index: -1;
 }
 
-.container {
+.container-fluid {
     padding: 10px 10%;
+
 }
 
 a {
     color: cyan;
 }
 
+/*----------------------- nav -----------------------*/
+
+nav {
+    background: black;
+    border-color: white;
+    border-radius: 32px;
+    border-width: 3px;
+    border-style: outset;
+    box-shadow: 0 0 10px black;
+    justify-self: center;
+
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
+
+    margin-top: 20px;
+}
+
+nav img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-top: 20px;
+}
+
+nav ul li {
+    font-size: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul.tabs li{
+    margin-right: 30px;
+}
+
+nav ul.icons{
+    margin-right: 40px;
+}
+
+nav ul.icons li{
+    margin-left: 30px;
+}
+
+nav ul.icons li a i{
+    transition: scale 0.4s;
+}
+
+nav ul.icons li a i:hover {
+    scale: 1.5;
+}
+
+nav ul.tabs li a {
+  position: relative;
+}
+
+nav ul.tabs li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul.tabs li a:hover::after, nav ul.tabs li a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+/*----------------------- product list -----------------------*/
+
 .frosted-glass {
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
     border: 1px rgba(224, 224, 224, 0.3); solid;
     padding: 30px;
     background: rgba(255, 255, 255, 0.35);
@@ -49,18 +134,21 @@ a {
 }
 
 .products-list {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     list-style: none;
+    /*justify-content: center;*/
+    /*background: green;*/
+
 }
 
-.product-list-view {
+.product-list-view {    /* frosted glass for product list view */
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 30px;
     transition: scale 0.5s;
-    will-change: transform; /* fix for text transition */
+    will-change: transform;
 }
 
 .product-list-view:hover {
@@ -77,13 +165,196 @@ a {
     text-decoration: none;
     color: black;
     display: block;
-}
 
-.product-list-view h3 {
-    margin-bottom: 10px;
 }
 
 .product-list-view h4 {
     margin-top: 10px;
     font-size: 32px;
+    background: black;
+    color: var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    border: 3px inset var(--primary-color);
+}
+
+.frosted-glass.product-list-view .header-container {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.frosted-glass.product-list-view .header-container .name{
+    font-size: 32px;
+}
+
+.frosted-glass.product-list-view .header-container .set-number{
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 8px;
+    background: black;
+    border-radius: 4px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.frosted-glass.product-list {
+    transition: background 0.5s;
+}
+
+.frosted-glass.product-list:hover {
+    background: rgba(255, 0, 0, 0.65);
+}
+
+/*----------------------- filters -----------------------*/
+
+.toolbar-container {
+    background: black;
+    border-color: white;
+    border-radius: 32px;
+    border-width: 3px;
+    border-style: outset;
+    box-shadow: 0 0 10px black;
+
+    width: 100%;
+    margin-top: 20px;
+}
+
+.toolbar-container h2 {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
+.list-tools {
+    display: flex;
+    gap: 60px;
+
+    padding: 20px;
+    padding-bottom: 10px;
+ }
+
+.list-tools .filters {
+    display: flex;
+    gap: 20px;
+}
+
+.list-tools .sorting {
+    margin-left: auto;
+}
+
+.dropdown-container {
+    /*width: 120px;*/
+    position: relative;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+}
+
+.dropdown-container:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown li {
+    cursor: pointer;
+    margin: 0;
+    background: black;
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+
+    padding: 4px 8px;
+}
+
+.dropdown li:hover {
+    background-color: #4d4d4d;
+}
+
+#filterDisplay{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.filter-item {
+    background: black;
+    color: red;
+    padding: 8px;
+    border-radius: 16px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+    width: fit-content;
+    margin: 10px;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+.remove-btn {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    transition: scale 0.5s;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.remove-btn:hover {
+    scale: 1.5;
+}
+
+.remove-btn i {
+    color: red;
+    will-change: transform;
+}
+
+.price-inputs-container {
+    display: flex;
+    margin-left: 20px;
+}
+
+.inputs-container {
+    margin-left: 5px;
+}
+
+.inputs-container input {
+    border-radius: 4px;
+    background: #4d4d4d;
+    width: 80px;
+    color: white;
+}
+
+.inputs-container input::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.inputs-container button {
+    background: #391bb3;
+    padding: 2px 8px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* For Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -15,7 +15,7 @@
     <nav>
         <img src="../../assets/logo_v2.png" alt="logo" class="logo">
         <ul class="tabs">
-            <li><a href="#home">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li><a class="active" href="#singles">Singles</a></li>
             <li><a href="sealed.html">Sealed Products</a></li>
         </ul>
@@ -31,18 +31,27 @@
         <div class="list-tools">
             <div class="filters">
                 <div class="dropdown-container">
-                    <span class="label">Set</span>
+                    <span class="label">Set <i class="fa-solid fa-chevron-down"></i></span>
                     <ul class="dropdown">
                         <li data-filter="cardset" data-value="Call of Legends">Call of Legends</li>
                         <li data-filter="cardset" data-value="Stellar Crown">Stellar Crown</li>
-                        <li data-filter="cardset" data-value="Undaunted">Undaunted</li>
+                        <!--<li data-filter="cardset" data-value="Undaunted">Undaunted</li>-->
+                        <li data-filter="cardset" data-value="Temporal Forces">Temporal Forces</li>
+                        <li data-filter="cardset" data-value="Black and White Promos">Black and White Promos</li>
+                        <li data-filter="cardset" data-value="Terastal Festival">Terastal Festival</li>
+                        <li data-filter="cardset" data-value="Trading Card Game Classic">Trading Card Game Classic</li>
                     </ul>
                 </div>
                 <div class="dropdown-container">
-                    <span class="label">Card Type</span>
+                    <span class="label">Card Type <i class="fa-solid fa-chevron-down"></i></span>
                     <ul class="dropdown">
                         <li data-filter="type" data-value="EX">EX</li>
                         <li data-filter="type" data-value="IR">Illustration Rares</li>
+                        <li data-filter="type" data-value="Holo">Holo</li>
+                        <li data-filter="type" data-value="Reverse Holo">Reverse Holo</li>
+                        <li data-filter="type" data-value="PRIME">PRIME</li>
+                        <li data-filter="type" data-value="VSTAR">VSTAR</li>
+                        <li data-filter="type" data-value="Rare Ace">Rare Ace</li>
                     </ul>
                 </div>
                 <div class="price-inputs-container">
@@ -56,7 +65,7 @@
             </div>
             <div class="sorting">
                 <div class="dropdown-container">
-                    <span id="currentSortLabel">Sort by: <strong id="sortMethodLabel">Alphabetically (A-Z)</strong></span>
+                    <span id="currentSortLabel">Sort by: <strong id="sortMethodLabel">Alphabetically (A-Z)</strong> <i class="fa-solid fa-chevron-down"></i></span>
                     <ul class="dropdown" id="sortOptions">
                         <li data-sort="alphabetical-asc" data-label="Alphabetically (A-Z)">Alphabetically (A-Z)</li>
                         <li data-sort="price-asc" data-label="Price (low to high)">Price (low to high)</li>
@@ -70,7 +79,7 @@
 
     <ul id="productLinks" class="products-list"></ul>
 
-    <a href="../">Back to Home Page</a>
+    <!--<a href="../">Back to Home Page</a>-->
 
 </div>
 <script src="../js/product.js"></script>

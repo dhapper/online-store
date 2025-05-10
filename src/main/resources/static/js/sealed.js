@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const { cardset = null } = filterCriteria;
 
           let filteredProducts = data.filter(product => {
-            const cardSetMatches = (cardset === null || product.card_set === cardset);
+            const cardSetMatches = (cardset === null || product.cardSet === cardset);
             return cardSetMatches;
           });
 
@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             a.href = '/product/sealed-entry.html?id=' + product.id;
             a.innerHTML = `
-              <div class="frosted-glass product-list-view">
+              <div class="frosted-glass product-list-view sealed-list">
                 <div class="header-container">
-                  <h3 class="name">${product.name}</h3>
+                  <h3 class="name name-sealed">${product.name}</h3>
                 </div>
                 <img src="${imageBasePath}${product.filename}" alt="Image of ${product.name}" class="product-image" />
-                <h4>$${product.price.toFixed(2)}</h4>
+                <h4 class="test">$${product.price.toFixed(2)}</h4>
               </div>
             `;
             li.appendChild(a);

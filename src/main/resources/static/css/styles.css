@@ -168,7 +168,7 @@ nav ul.tabs li a:hover::after, nav ul.tabs li a.active::after {
 
 }
 
-.product-list-view h4 {
+/*.product-list-view h4 {
     margin-top: 10px;
     font-size: 32px;
     background: black;
@@ -176,16 +176,39 @@ nav ul.tabs li a:hover::after, nav ul.tabs li a.active::after {
     border-radius: 8px;
     padding: 10px;
     border: 3px inset var(--primary-color);
+}*/
+
+.product-list-view h4 {
+    margin-top: 10px;
+    font-size: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    color: black;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: inset -4px -4px 8px white,
+                    inset 4px 4px 8px black;
+    text-shadow:    -1px -1px 2px rgba(255,255,255,0.7),
+                    1px 1px 2px rgba(0,0,0,0.7);
+
+    margin-top: 20px;
 }
 
 .frosted-glass.product-list-view .header-container {
     width: 100%;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: inset -4px -4px 8px white,
+                        inset 4px 4px 8px black;
 }
 
 .frosted-glass.product-list-view .header-container .name{
     font-size: 32px;
+    text-shadow:    -1px -1px 2px rgba(255,255,255,0.7),
+                    1px 1px 2px rgba(0,0,0,0.7);
 }
 
 .frosted-glass.product-list-view .header-container .set-number{
@@ -196,6 +219,8 @@ nav ul.tabs li a:hover::after, nav ul.tabs li a.active::after {
     border-radius: 4px;
     width: fit-content;
     font-weight: bold;
+    box-shadow: -1px -1px 2px rgba(255,255,255,0.7),
+                1px 1px 2px rgba(0,0,0,0.7);
 }
 
 .frosted-glass.product-list {
@@ -360,3 +385,32 @@ input[type=number] {
 }
 
 /*----------------------- sealed -----------------------*/
+
+.frosted-glass.product-list-view.sealed-list .header-container {
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 0;
+    background: rgba(0, 0, 0, 0);
+
+}
+
+.frosted-glass.product-list-view.sealed-list .header-container .name{
+    text-shadow: none;
+    font-weight: 700;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    width: 240px;
+    font-size: 24px;
+}
+
+.frosted-glass.product-list-view.sealed-list h4{
+    margin-top: 10px;
+    font-size: 32px;
+    background: black;
+    color: var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    border: 3px inset var(--primary-color);
+    box-shadow: none;
+}

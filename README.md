@@ -5,6 +5,7 @@ A simple e-commerce application built with Spring Boot.
 ## Features
 
 * Product display pages that use sophisticated filters
+* Unique CSS styling for my use case (making cards appear like they are in slabs)
 
 ## Technologies
 
@@ -20,7 +21,6 @@ A simple e-commerce application built with Spring Boot.
 
 ## To-Do List
 
-*   update database 
 *   find a suitable platform for hosting
 *   cart, checkout
 *   searchbar

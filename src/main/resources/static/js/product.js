@@ -53,11 +53,19 @@ function fetchAndDisplayProducts(filterCriteria = {}, sortOption = currentSortOp
           const li = document.createElement('li');
           const a = document.createElement('a');
 
+          // Extract the part before '#'
+          const namePart = product.name.split('#')[0].trim();
+
+          // Set displayName with length check
+          const displayName = namePart.length > 14
+            ? namePart.substring(0, 10) + "..."
+            : namePart;
+
           a.href = '/product/product-entry.html?id=' + product.id;
           a.innerHTML = `
             <div class="frosted-glass product-list-view">
               <div class="header-container">
-                <h3 class="name">${product.name.split('#')[0].trim()}</h3>
+                <h3 class="name">${displayName}</h3>
                 <h3 class="set-number">#${product.name.split('#')[1].trim()}</h3>
               </div>
               <img src="${imageBasePath}${product.filename}" alt="Image of ${product.name}" class="product-image">

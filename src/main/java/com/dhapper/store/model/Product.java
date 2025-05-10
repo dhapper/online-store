@@ -12,9 +12,6 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "created_at")
-    private OffsetDateTime createdAt;
-
 //    private String category;
     private String name;
 //    private String description;
@@ -34,13 +31,6 @@ public class Product {
         this.id = id;
     }
 
-    public OffsetDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(OffsetDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
 
 //    public String getCategory() {
 //        return category;

@@ -4,7 +4,7 @@ A simple e-commerce application built with Spring Boot.
 
 ## Features
 
-*   Product display and entry page.
+* Product display pages that use sophisticated filters
 
 ## Technologies
 
@@ -12,7 +12,7 @@ A simple e-commerce application built with Spring Boot.
     *   Spring Boot
     *   Java
     *   Maven (Dependency Management)
-    *   PostgresSQL (Supabase)
+    *   SQLite
 *   **Frontend:**
     *   HTML
     *   CSS
@@ -20,7 +20,9 @@ A simple e-commerce application built with Spring Boot.
 
 ## To-Do List
 
-*   implement bootstrap and some basic css styling
-*   update database
-  * update to sqlite
-    
+*   update database 
+*   find a suitable platform for hosting
+*   cart, checkout
+*   searchbar
+*   home page, featured items
+
